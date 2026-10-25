@@ -165,7 +165,7 @@
   function startFrames() {
     clearInterval(timer);
     var light = document.documentElement.dataset.light, keys = ORDERS[light], frames = keys.map(function (k) { return document.querySelector('.frame[data-key="' + k + '"]'); });
-    document.querySelectorAll(".frame").forEach(function (f) { f.classList.remove("live"); });
+    document.querySelectorAll(".frame").forEach(function (f) { if (f !== frames[0]) f.classList.remove("live", "first"); });
     var i = 0;
     frames[0].classList.add("live");
     if (K.reduce || frames.length < 2) return;

@@ -86,6 +86,7 @@ a { color: inherit; }
 .frame { display: none; opacity: 0; transition: opacity 2.4s ease; }
 .frame img { object-fit: cover; transform: scale(1); }
 .frame.live { opacity: 1; }
+.frame.first { transition: none; }
 .frame.live img { animation: push 9s linear forwards; }
 @keyframes push { from { transform: scale(1); } to { transform: scale(1.08); } }
 html[data-light="morning"] .frame.m, html[data-light="afternoon"] .frame.a, html[data-light="lamps"] .frame.e { display: block; }
@@ -262,6 +263,15 @@ html[data-light="lamps"] .eng { --e-line-strong: rgba(242,228,208,.35); --e-on-a
         <img src="img/c-night-p-828.webp" width="944" height="1680" alt="" loading="lazy" decoding="async">
       </picture>
     </div>
+    <script>
+      /* show this light's first frame before any other script runs, so the photograph paints first */
+      (function () {
+        var k = { morning: "steam", afternoon: "window", lamps: "night" }[document.documentElement.dataset.light];
+        var f = document.querySelector('.frame[data-key="' + k + '"]'); if (!f) return;
+        f.classList.add("live", "first");
+        var i = f.querySelector("img"); i.loading = "eager"; i.setAttribute("fetchpriority", "high");
+      })();
+    </script>
     <div class="shade"></div>
     <div class="hero-type">
       <p class="kicker" data-i18n="kicker">Panadería y café dominicano, Astoria</p>
