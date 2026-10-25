@@ -86,7 +86,8 @@ a { color: inherit; }
 .title, .skip-hint { z-index: 4; }
 .ride video.on { opacity: 1; }
 #loopV { transition: opacity .9s ease; }
-.curtain { background: #000; opacity: 1; transition: opacity .45s ease .05s; pointer-events: none; }
+.curtain { background: #000; opacity: 1; pointer-events: none; animation: lift .5s ease .15s forwards; }
+@keyframes lift { to { opacity: 0; } }
 .ride-go .curtain, .skip-ride .curtain { opacity: 0; }
 .title { position: absolute; left: var(--gutter); right: var(--gutter-r); top: calc(env(safe-area-inset-top, 0px) + 12.5svh); text-align: center; pointer-events: none; }
 .name { margin: 0; font-size: 15px; font-weight: 400; letter-spacing: .42em; text-indent: .42em; opacity: 0; transition: opacity 1.2s ease; }
