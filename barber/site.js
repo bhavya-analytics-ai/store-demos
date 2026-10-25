@@ -39,14 +39,14 @@
       cutsTitle: "The cuts", cutsFoot: "Prices in dollars. Every cut finishes with a hot towel.", teamTitle: "Three chairs.",
       baTitle: "Forty-five minutes.", baSub: "Drag the line. Same man, same chair, same light.", before: "Before", after: "After", baAria: "Compare before and after",
       visitTitle: "Follow the light.", directions: "Directions", call: "Call", google: "Find us on Google", today: "today", phoneLabel: "Phone",
-      bookBig: "Book a chair", bookSmall: "Cuts from $45", bookBtn: "Book", bookWith: "Book with {n}", min: "{m} min"
+      bookBig: "Book a chair", bookSmall: "Cuts from $45", bookBtn: "Book", bookWith: "Book with {n}", min: "{m} min", hoursAria: "Hours", foot: "Candil, barbers. 28-19 Steinway Street, Astoria, NY 11103."
     },
     es: {
       sound: "Sonido", line: "Entra. Sal distinto.", skip: "Toca para saltar",
       cutsTitle: "Los cortes", cutsFoot: "Precios en dólares. Cada corte termina con toalla caliente.", teamTitle: "Tres sillas.",
       baTitle: "Cuarenta y cinco minutos.", baSub: "Arrastra la línea. Mismo hombre, misma silla, misma luz.", before: "Antes", after: "Después", baAria: "Comparar antes y después",
       visitTitle: "Sigue la luz.", directions: "Cómo llegar", call: "Llamar", google: "Búscanos en Google", today: "hoy", phoneLabel: "Teléfono",
-      bookBig: "Reserva tu corte", bookSmall: "Cortes desde $45", bookBtn: "Reservar", bookWith: "Reserva con {n}", min: "{m} min"
+      bookBig: "Reserva tu corte", bookSmall: "Cortes desde $45", bookBtn: "Reservar", bookWith: "Reserva con {n}", min: "{m} min", hoursAria: "Horario", foot: "Candil, barbería. 28-19 Steinway Street, Astoria, NY 11103."
     }
   };
 

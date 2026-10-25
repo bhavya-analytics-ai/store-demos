@@ -310,11 +310,11 @@ html[data-light="lamps"] .eng { --e-line-strong: rgba(242,228,208,.35); --e-on-a
 
   <section class="room" aria-labelledby="roomTitle">
     <h2 id="roomTitle" class="rv" data-i18n="roomTitle">Stay a while.</h2>
-    <div class="strip" tabindex="0" aria-label="Photos of the bakery">
-      <figure><picture><source type="image/avif" srcset="img/c-counter-480.avif 480w, img/c-counter-828.avif 828w, img/c-counter-1136.avif 1136w" sizes="(min-width: 900px) 31vw, 80vw"><img src="img/c-counter-828.webp" width="1136" height="1408" alt="The mahogany counter with a frosted bizcocho and the brass register" loading="lazy" decoding="async"></picture><figcaption data-i18n="capCounter">The counter</figcaption></figure>
-      <figure><picture><source type="image/avif" srcset="img/c-case-480.avif 480w, img/c-case-828.avif 828w, img/c-case-1136.avif 1136w" sizes="(min-width: 900px) 31vw, 80vw"><img src="img/c-case-828.webp" width="1136" height="1408" alt="The glass case full of pastelitos and guava pastries" loading="lazy" decoding="async"></picture><figcaption data-i18n="capCase">The case</figcaption></figure>
-      <figure><picture><source type="image/avif" srcset="img/c-hands-480.avif 480w, img/c-hands-828.avif 828w, img/c-hands-1136.avif 1136w" sizes="(min-width: 900px) 31vw, 80vw"><img src="img/c-hands-828.webp" width="1136" height="1408" alt="Hands kneading dough on a floured table" loading="lazy" decoding="async"></picture><figcaption data-i18n="capHands">Hands in the dough</figcaption></figure>
-      <figure><picture><source type="image/avif" srcset="img/c-corner-480.avif 480w, img/c-corner-828.avif 828w, img/c-corner-1136.avif 1136w" sizes="(min-width: 900px) 31vw, 80vw"><img src="img/c-corner-828.webp" width="1136" height="1408" alt="The corner table by the window with a cafecito and a pastelito" loading="lazy" decoding="async"></picture><figcaption data-i18n="capCorner">The corner table</figcaption></figure>
+    <div class="strip" tabindex="0" aria-label="Photos of the bakery" data-i18n-aria="stripAria">
+      <figure><picture><source type="image/avif" srcset="img/c-counter-480.avif 480w, img/c-counter-828.avif 828w, img/c-counter-1136.avif 1136w" sizes="(min-width: 900px) 31vw, 80vw"><img src="img/c-counter-828.webp" width="1136" height="1408" alt="The mahogany counter with a frosted bizcocho and the brass register" data-i18n-alt="altCounter" loading="lazy" decoding="async"></picture><figcaption data-i18n="capCounter">The counter</figcaption></figure>
+      <figure><picture><source type="image/avif" srcset="img/c-case-480.avif 480w, img/c-case-828.avif 828w, img/c-case-1136.avif 1136w" sizes="(min-width: 900px) 31vw, 80vw"><img src="img/c-case-828.webp" width="1136" height="1408" alt="The glass case full of pastelitos and guava pastries" data-i18n-alt="altCase" loading="lazy" decoding="async"></picture><figcaption data-i18n="capCase">The case</figcaption></figure>
+      <figure><picture><source type="image/avif" srcset="img/c-hands-480.avif 480w, img/c-hands-828.avif 828w, img/c-hands-1136.avif 1136w" sizes="(min-width: 900px) 31vw, 80vw"><img src="img/c-hands-828.webp" width="1136" height="1408" alt="Hands kneading dough on a floured table" data-i18n-alt="altHands" loading="lazy" decoding="async"></picture><figcaption data-i18n="capHands">Hands in the dough</figcaption></figure>
+      <figure><picture><source type="image/avif" srcset="img/c-corner-480.avif 480w, img/c-corner-828.avif 828w, img/c-corner-1136.avif 1136w" sizes="(min-width: 900px) 31vw, 80vw"><img src="img/c-corner-828.webp" width="1136" height="1408" alt="The corner table by the window with a cafecito and a pastelito" data-i18n-alt="altCorner" loading="lazy" decoding="async"></picture><figcaption data-i18n="capCorner">The corner table</figcaption></figure>
     </div>
   </section>
 
@@ -330,12 +330,12 @@ html[data-light="lamps"] .eng { --e-line-strong: rgba(242,228,208,.35); --e-on-a
       <p class="phone" id="phoneText"></p>
       <a class="google" id="googleLink" href="#" target="_blank" rel="noopener" data-i18n="google">Find us on Google</a>
     </div>
-    <ul class="hours" id="hours" aria-label="Hours"></ul>
+    <ul class="hours" id="hours" aria-label="Hours" data-i18n-aria="hoursAria"></ul>
   </section>
 </main>
 
 <footer>
-  <p>Harina Clara, panadería y café. 28-17 30th Avenue, Astoria, NY 11102.</p>
+  <p data-i18n="foot">Harina Clara, Dominican bakery and café. 28-17 30th Avenue, Astoria, NY 11102.</p>
 </footer>
 
 <div class="bar" id="bar"><button type="button" id="barBtn"><span id="barLabel"></span><span class="sum" id="barSum"></span></button></div>

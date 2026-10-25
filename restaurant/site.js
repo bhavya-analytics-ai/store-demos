@@ -63,7 +63,7 @@
       reserve: "Reservar", pickup: "Pide para recoger", yourOrder: "Tu pedido", add: "Añadir", weekAria: "Ver otra noche", stripAria: "Fotos del local",
       tonight: "Esta noche es", tonightLate: "Todavía es", plate: "Plato del día", happy: "Happy hour", happyText: "2 × 1 en cervezas y tragos de la casa",
       happyOn: "Ahora mismo, hasta las 7. Quedan {m}.", happyLater: "Hoy de 4 a 7 de la tarde.", happyDone: "Hoy fue de 4 a 7. Mañana otra vez.", happyDoneMon: "Hoy fue de 4 a 7. Vuelve el lunes.", happyNone: "De lunes a viernes, de 4 a 7.",
-      kitchen: "Cocina", hookahPrice: "<b>$35</b> la hookah", hookahRefill: "<b>$15</b> el refill", age: "Solo mayores de 21"
+      hoursAria: "Horario", foot: "Desvelo, restaurante y bar. 33-07 Ditmars Boulevard, Astoria, NY 11105.", kitchen: "Cocina", hookahPrice: "<b>$35</b> la hookah", hookahRefill: "<b>$15</b> el refill", age: "Solo mayores de 21"
     },
     en: {
       kicker: "Dominican restaurant and bar, Ditmars", filmTitle: "The menu", filmSub: "Tap + to order it for pickup. The kitchen stays open until 3.",
@@ -75,7 +75,7 @@
       reserve: "Reserve", pickup: "Order pickup", yourOrder: "Your order", add: "Add", weekAria: "See another night", stripAria: "Photos of the room",
       tonight: "Tonight is", tonightLate: "It's still", plate: "Plate of the day", happy: "Happy hour", happyText: "2 for 1 on beer and house drinks",
       happyOn: "On now until 7. {m} left.", happyLater: "Today from 4 to 7 PM.", happyDone: "Today was 4 to 7. Again tomorrow.", happyDoneMon: "Today was 4 to 7. Back on Monday.", happyNone: "Monday to Friday, 4 to 7.",
-      kitchen: "Kitchen", hookahPrice: "<b>$35</b> a hookah", hookahRefill: "<b>$15</b> a refill", age: "21 and over only"
+      hoursAria: "Hours", foot: "Desvelo, restaurant and bar. 33-07 Ditmars Boulevard, Astoria, NY 11105.", kitchen: "Kitchen", hookahPrice: "<b>$35</b> a hookah", hookahRefill: "<b>$15</b> a refill", age: "21 and over only"
     }
   };
 

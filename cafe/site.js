@@ -52,7 +52,7 @@
       directions: "Directions", call: "Call", google: "Find us on Google", today: "today",
       capCounter: "The counter", capCase: "The case", capHands: "Hands in the dough", capCorner: "The corner table",
       add: "Add", orderPickup: "Order for pickup", review: "Review order", items: "{n} items", item: "1 item",
-      gm: "Good morning.", ga: "Good afternoon.", ge: "Good evening.", phoneLabel: "Phone", scrubLabel: "See the room at", now: "Now"
+      gm: "Good morning.", ga: "Good afternoon.", ge: "Good evening.", phoneLabel: "Phone", scrubLabel: "See the room at", now: "Now", altCounter: "The mahogany counter with a frosted bizcocho and the brass register", altCase: "The glass case full of pastelitos and guava pastries", altHands: "Hands kneading dough on a floured table", altCorner: "The corner table by the window with a cafecito and a pastelito", stripAria: "Photos of the bakery", hoursAria: "Hours", foot: "Harina Clara, Dominican bakery and café. 28-17 30th Avenue, Astoria, NY 11102."
     },
     es: {
       kicker: "Panadería y café dominicano, Astoria", menuTitle: "En el mostrador", menuSub: "Toca + para añadirlo a tu pedido. Lo recoges calientito.",
@@ -60,7 +60,7 @@
       directions: "Cómo llegar", call: "Llamar", google: "Búscanos en Google", today: "hoy",
       capCounter: "El mostrador", capCase: "La vitrina", capHands: "Manos en la masa", capCorner: "La mesita de la esquina",
       add: "Añadir", orderPickup: "Pide para recoger", review: "Ver pedido", items: "{n} cosas", item: "1 cosa",
-      gm: "Buenos días.", ga: "Buenas tardes.", ge: "Buenas noches.", phoneLabel: "Teléfono", scrubLabel: "Mira el local a las", now: "Ahora"
+      gm: "Buenos días.", ga: "Buenas tardes.", ge: "Buenas noches.", phoneLabel: "Teléfono", scrubLabel: "Mira el local a las", now: "Ahora", altCounter: "El mostrador de caoba con un bizcocho y la caja registradora", altCase: "La vitrina llena de pastelitos y pastelitos de guayaba", altHands: "Manos amasando en una mesa con harina", altCorner: "La mesita de la esquina con un cafecito y un pastelito", stripAria: "Fotos de la panadería", hoursAria: "Horario", foot: "Harina Clara, panadería y café dominicano. 28-17 30th Avenue, Astoria, NY 11102."
     }
   };
 
