@@ -265,7 +265,11 @@
     });
     var top = $("#top");
     new IntersectionObserver(function (es) { top.classList.toggle("solid", !es[0].isIntersecting); }, { rootMargin: "-64px 0px 0px 0px" }).observe($("#hero"));
+    var hk = document.querySelector(".hookah");
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { hk.classList.toggle("seen", es[0].isIntersecting); }).observe(hk);
     setInterval(renderLive, 30000);
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
+  /* film grain starts once the page has painted and settled */
+  window.addEventListener("load", function () { setTimeout(function () { document.documentElement.classList.add("settled"); }, 900); });
 })();

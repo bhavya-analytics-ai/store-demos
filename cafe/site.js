@@ -240,4 +240,6 @@
     setInterval(renderLive, 30000);
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
+  /* film grain starts once the page has painted and settled */
+  window.addEventListener("load", function () { setTimeout(function () { document.documentElement.classList.add("settled"); }, 900); });
 })();
