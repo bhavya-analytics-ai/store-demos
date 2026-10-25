@@ -19,7 +19,7 @@
       demoNote: "Demo checkout · no charge", demoCard: "This is the shop's own pay screen in demo mode. With Stripe connected, Apple Pay, Google Pay and card appear here.",
       payBtn: "Pay {amt}", processing: "Processing", paid: "Paid",
       holdBtn: "Confirm, pay at the shop", pickupBtn: "Place order, pay at pickup",
-      booked: "You're booked.", ordered: "Order in.", heldNote: "Nothing charged. Pay at the shop.", paidNote: "{amt} paid.", paidDemoNote: "{amt} paid in demo mode. No money moved.",
+      booked: "You're booked.", ordered: "Order in.", heldNote: "Nothing charged. Pay at the shop.", heldNoteOrder: "Nothing charged. Pay when you pick it up.", paidNote: "{amt} paid.", paidDemoNote: "{amt} paid in demo mode. No money moved.",
       textShop: "Text it to {shop}", textOpened: "Messages opened. Press send so {shop} has it.",
       addCal: "Add to calendar", doneBtn: "Done", ref: "Reference", orderNo: "Order",
       bag: "Your bag", notes: "Notes", notesPh: "No onions, extra hot…", empty: "Your bag is empty. Add something from the menu.",
@@ -43,7 +43,7 @@
       demoNote: "Pago de prueba · no se cobra nada", demoCard: "Esta es la pantalla de pago del negocio en modo de prueba. Con Stripe conectado, aquí salen Apple Pay, Google Pay y tarjeta.",
       payBtn: "Pagar {amt}", processing: "Procesando", paid: "Pagado",
       holdBtn: "Confirmar, pago en el local", pickupBtn: "Hacer pedido, pago al recoger",
-      booked: "¡Listo! Tu cita está hecha.", ordered: "¡Pedido hecho!", heldNote: "No se cobró nada. Pagas en el local.", paidNote: "{amt} pagado.", paidDemoNote: "{amt} pagado en modo de prueba. No se movió dinero.",
+      booked: "¡Listo! Tu cita está hecha.", ordered: "¡Pedido hecho!", heldNote: "No se cobró nada. Pagas en el local.", heldNoteOrder: "No se cobró nada. Pagas al recoger.", paidNote: "{amt} pagado.", paidDemoNote: "{amt} pagado en modo de prueba. No se movió dinero.",
       textShop: "Mándaselo a {shop} por texto", textOpened: "Se abrió Mensajes. Dale a enviar para que {shop} lo tenga.",
       addCal: "Añadir al calendario", doneBtn: "Listo", ref: "Referencia", orderNo: "Pedido",
       bag: "Tu funda", notes: "Notas", notesPh: "Sin cebolla, bien caliente…", empty: "Tu funda está vacía. Escoge algo del menú.",
@@ -360,7 +360,7 @@
     },
     pay: function (s, cfg, d) {
       var opts = payOptions(cfg, d), sel = currentPayOpt(cfg, d), html = "";
-      if (opts.length > 1 || opts[0].locked) {
+      if (opts.length) {
         html += '<div class="e-opts" role="radiogroup">' + opts.map(function (o) {
           var on = sel && sel.id === o.id;
           return '<button type="button" role="radio" aria-checked="' + on + '" class="e-opt' + (on ? " on" : "") + '" data-opt="' + esc(o.id) + '">' +
@@ -380,7 +380,7 @@
       var isOrder = flow.kind === "order";
       var big = isOrder ? "#" + d.ref : d.ref;
       var when = isOrder ? (d.pickup && d.pickup.id === "asap" ? w("readyIn", { m: cfg.lead || 15 }) : w("readyAt", { t: K.time(d.pickupAt) })) : w("seeYou", { when: whenWords(d.time) });
-      var paidLine = flow.paidMode === "hold" ? w("heldNote") : flow.paidMode === "demo" ? w("paidDemoNote", { amt: K.money(d.paidAmount) }) : w("paidNote", { amt: K.money(d.paidAmount) });
+      var paidLine = flow.paidMode === "hold" ? w(isOrder ? "heldNoteOrder" : "heldNote") : flow.paidMode === "demo" ? w("paidDemoNote", { amt: K.money(d.paidAmount) }) : w("paidNote", { amt: K.money(d.paidAmount) });
       var html = '<div class="e-done"><div class="e-done-mark">' + ICON.check + '</div>' +
         '<p class="e-done-label">' + esc(isOrder ? w("orderNo") : w("ref")) + '</p><p class="e-done-ref">' + esc(big) + "</p>" +
         '<p class="e-done-when">' + esc(when) + "</p>" +
