@@ -128,12 +128,14 @@
     K.store.sset("candil:ride", "1");
     setTimeout(function () { $("#book").classList.add("up"); }, K.reduce ? 0 : 900);
   }
+  /* the ride's last frame is the loop's first frame: land on it now, swap to the loop when it can play */
   function toLoop(fast) {
-    if (K.reduce) { html.classList.add("skip-ride"); land(); return; }
-    if (!loopV.src) { loopV.src = loopSrc; }
+    land();
+    if (K.reduce) { html.classList.add("skip-ride"); return; }
+    if (!loopV.src) loopV.src = loopSrc;
+    var swap = function () { loopV.classList.add("on"); setTimeout(function () { rideV.classList.remove("on"); rideV.pause(); }, fast ? 0 : 500); };
     var p = loopV.play();
-    var swap = function () { loopV.classList.add("on"); setTimeout(function () { rideV.classList.remove("on"); rideV.pause(); }, fast ? 0 : 500); land(); };
-    if (p && p.then) p.then(swap).catch(function () { html.classList.add("skip-ride"); rideV.classList.remove("on"); land(); });
+    if (p && p.then) p.then(swap).catch(function () { if (!rideV.classList.contains("on")) html.classList.add("skip-ride"); });
     else swap();
   }
   function startRide() {
@@ -147,15 +149,18 @@
     rideV.addEventListener("playing", function () {
       clearTimeout(fallback);
       rideV.classList.add("on"); ride.classList.add("ride-go");
-      loopV.preload = "auto"; loopV.src = loopSrc; loopV.load();
     }, { once: true });
+    /* fetch the loop once the ride itself is buffered, so the two never fight for the connection */
+    var queueLoop = function () { if (!loopV.src) { loopV.preload = "auto"; loopV.src = loopSrc; loopV.load(); } };
+    rideV.addEventListener("canplaythrough", queueLoop, { once: true });
     rideV.addEventListener("timeupdate", function () {
+      if (rideV.currentTime > 1.2) queueLoop();
       if (!landed && rideV.duration && rideV.currentTime >= rideV.duration - 0.12) toLoop();
     });
     rideV.addEventListener("ended", function () { toLoop(); });
     var p = rideV.play();
     if (p && p.catch) p.catch(function () { clearTimeout(fallback); ride.classList.add("ride-go"); setTimeout(function () { html.classList.add("skip-ride"); toLoop(true); }, 1200); });
-    ride.addEventListener("click", function () { if (!landed) { ride.classList.add("ride-go"); toLoop(true); } });
+    ride.addEventListener("click", function () { if (!landed) { ride.classList.add("ride-go"); rideV.pause(); html.classList.add("skip-ride"); toLoop(true); } });
   }
 
   /* ---------- sound: a low room hum and the clipper, made live in the browser ---------- */
