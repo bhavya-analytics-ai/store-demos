@@ -5,7 +5,7 @@
   function $(s) { return document.querySelector(s); }
 
   /* ---------- the shop: edit these lines for a real client ---------- */
-  var OM_NUMBER = "[OM'S NUMBER]";
+  var OM_NUMBER = "332-292-1036";
   var SHOP = window.SHOP = {
     id: "candil",
     name: "Candil",

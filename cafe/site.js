@@ -4,7 +4,7 @@
   var K = window.Kit, L = K.Lang;
 
   /* ---------- the shop: edit these lines for a real client ---------- */
-  var OM_NUMBER = "[OM'S NUMBER]";
+  var OM_NUMBER = "332-292-1036";
   var SHOP = window.SHOP = {
     id: "harina-clara",
     name: "Harina Clara",

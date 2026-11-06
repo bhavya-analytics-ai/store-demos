@@ -5,7 +5,7 @@
   function $(s) { return document.querySelector(s); }
 
   /* ---------- the shop: edit these lines for a real client ---------- */
-  var OM_NUMBER = "[OM'S NUMBER]";
+  var OM_NUMBER = "332-292-1036";
   /* the plate of the day: change this one line */
   var PLATO_DEL_DIA = { es: "Chivo guisado con moro de guandules", en: "Stewed goat with rice and pigeon peas", price: 21 };
   var SHOP = window.SHOP = {
